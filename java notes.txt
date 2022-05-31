@@ -1,0 +1,301 @@
+https://github.com/vishhaldawane/SBITO4
+
+Arshad  Rohit	Pratik  Kunal SriLaxmi Hemlatha Irfana Tejaswini Sumita Vinay Nandish Rohit
+|
+Gaurav Abhishek Yash Vachaspati Dipesh Pushpendra Karan
+
+Project
+--------
+6 layers
+
+1. DATABASE layer
+2. POJO layer - plain old java object
+3. DAO layer / repository layer 
+
+4. Service layer - business logic 
+
+5. Controller - spring boot
+6. UI - Angular - IDLI
+
+	7 Habits of highly effective people
+
+	1. Be proactive
+	2. Begin with the "end in mind"
+	3. Put first thing first
+
+
+
+		Java programming language
+				|
+		-------------------------------------
+		|		|		|
+		JSE		JEE		JME
+		|		|		|
+		standard	enterprise	micro
+		|		|			
+		corejava	----------
+		|		|	|
+	---------------		ORM	CDI	
+	|		Hibernate/JPA	Spring
+language fundamentals			Spring JDBC
+OOPS concepts				Spring JPA
+isA hasA usesA producesA		Spring WEB
+packages				Spring REST
+exception handling
+multithreading
+generics
+collections
+file handling
+jdbc
+
+
+
+
+
+
+
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	Course for 25 days
+	3 days for the project case study implementation
+
+	Core Java
+	SQL
+	Angular
+	Hibernate
+	Spring
+	
+
+	Nomura - Lehman Brothers  27 years
+
+
+	MS	Sun
+		Oracle	IBM	  HP		Apple	<-providers	ANY	ANY
+CPU	Intel	SPARC	BlackBox  hpseries	PowerPC <-- tangible	ANY	ANY
+OS	Windows	Solaris	AIX	  Hp-UX		Macintosh <--OS		ANY - linux	
+VM	JVM	JVM	JVM	  JVM		JVM			JVM
+	|
+	Greeting.java
+	|
+	Greet.class ->	->	->		->			->			???
+
+	
+	1. JAVA IS wora/simple
+	2. 100% OBJECT ORIENTED
+	3. 100% Secured - Sandbox 
+			no direct memory access
+			- pointers   
+	4. Robust - ability to perform "garbage" collection
+			ability to handle exceptions
+	5. Multithreaded
+	6. Dynamic - runtime objects
+	7. Distributed
+
+		JVM			JVM
+DB		|			|		1
+ |		servercode		client code -> withdraw(){}
+ |BL	4	|			 withdraw(){}
+ withdraw()<----ATMSERVER<------------ATMClient
+		withdraw(){}	
+		RMI			RMI
+
+		RPC
+	
+class SavingsAccount
+{
+  float balance;
+
+  void withdraw(float amt) {
+   balance = balance - amt;
+  }
+
+}
+
+----------------------------------------------------
+4 types of functions in any programming language
+
+	function without argument and without return value
+	1. void calcSimpleInterest() 
+	   {
+		float si;
+		float p=5000;  int n=5; float r=6.8f;
+		si = (p*n*r)/100;
+		sop(si);
+           }
+
+	function with arguments and without return value
+	2. void fun(float p, int n, float r) 
+	   {
+		float si = (p*n*r)/100;
+		sop(si);
+           }
+
+	function with arguments and with return value
+	3. float fun(float p, int n, float r) 
+	   {
+		return (p*n*r)/100;
+           }
+
+	4. float fun() 
+	   {
+		float p=5000;  int n=5; float r=6.8f;
+		return (p*n*r)/100;
+           }
+
+
+
+
+
+
+Formula of creation 
+
+	assignment
+	---------------
+	think + feel  = action + result
+	invisible	visible
+	electricity
+	|
+
+	class Cricketer
+	{
+		void hitSixer() {
+
+		}
+	}
+
+
+	Food rice = new Food();
+	rice.eat();
+
+	class Food
+	{
+		void eat() {
+
+		}
+	}
+	
+
+
+	class SavingsAccount
+	{
+		void withdraw() {
+
+		}
+	}
+
+
+
+		DATA TYPES
+			|
+			-------------------------------------
+			|				|
+		primitive			Secondary
+			|				|
+   ---------------------------------------	--------------------
+      |		| 	|	 |		|
+Integral  Floating   Character	Boolean		Object
+      |		|	|	 |		    |
+byte  1	  float  4	char 2  boolean 1 	String
+short 2	  double 8	UNICODE	 default is	"new york"
+int   4				 false		"new mumbai"
+long  8
+
+		int i=10; 			<-- primitive
+		Integer i = new Integer(10);     <-- Object way 
+
+		Cricketer c = new Cricketer();
+
+
+	byte - Byte
+	short - Short
+	int	- Integer
+	long	- Long
+	float	-Float
+	double	- Double
+	boolean - Boolean
+
+	
+	Bottle b1 = new Bottle();
+	Bottle b2 = new Bottle();
+	Bottle b3 = new Bottle();
+	Bottle b4 = new Bottle();
+	Bottle b5 = new Bottle();
+
+
+
+class Bottle
+{
+	int length;
+	int capacity;
+	int size; 
+	String color;
+	String material;
+	int weight;
+	
+	printDetails() { }	
+
+}
+
+Class design
+---------------
+	object = physical state + behaviour
+			|		|
+			acno
+			acname
+			acbalance	withdraw() { }, deposit() { }
+					printBalance() { }
+					listenBalance() { }
+
+	object = data + functions
+
+
+		class		vs		object
+		|				|
+	design of an object		instance of a class
+		|				|
+	just a plain text file		memory activity 
+		|				|
+		logical				physical
+
+class SavingsAccount		SavingsAccount saObj = new SavingsAccount();
+{
+	data
+	+
+	void withdraw() {}
+	void deposit() { }
+	void transfer() { }
+	void printAccount() { }
+}
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
