@@ -1,3 +1,97 @@
+
+		Enterprise Applications
+
+	7 features of enterprise applications
+
+
+	ENTEPRRISE APPLICATION SERVER
+	--------------------------------
+
+	ORACLE WEBLOGIC - 5
+	A	B	C	D	E
+
+	IBM WEBSPHERE - WAS
+	REDHAT - JBoss
+
+
+	Spring framework - open source 
+	A B E
+
+	A B D
+
+1. Remote capability of an application
+
+	socket programming
+
+	ServerSocket s = new ServerSocket();
+	|
+	Socket s = new Socket();
+
+2. High availability of the application
+	24 X 7 
+	clustering 
+
+3. Multithreading
+
+	airindia.com	-> AI121 one flight - 200 seats 22.30pm
+	|
+	1 Mumbai 
+	  To
+	  London
+	2 Date : 10-June-2022
+	3 class : First Class	
+	4 one way 
+	SEARCH FLIGHT
+	
+		Flight f = new Flight("AI121",197);
+	
+4. POOLing of resources 
+	"same type of requirement" by many customers
+
+5. CACHing of resources
+	customer is identified by its primary key - CIN
+
+		Customer c1 = new Customer(email,phone,....);
+		Customer c2 = new Customer(email,phone,....);
+		Customer c3 = new Customer(email,phone,....);
+
+		Customer c4 = new Customer(email,phone,....);
+		Customer c5 = new Customer(email,phone,....);
+
+
+		Ticket t1 = new Ticket();
+		Ticket t2 = new Ticket();
+		Ticket t3 = new Ticket();
+	
+6. Transaction management - A C/C I/I  D
+
+7. Security management - https / TLS
+
+
+
+
+
+
+
+	NSE - nse.it	 nse tech
+
+	icici - 3 i infotech
+
+	product + services
+
+			who
+			|DBA/analyst/tester/coder/deployer
+		---------------------
+		|		|
+		where		when
+		|?		|?
+	-------------------------------------
+	|		|		|
+	why		what		how
+	|		|		|
+	reason		information	coding/implementation
+
+
 https://github.com/vishhaldawane/SBITO4
 
 Arshad  Rohit	Pratik  Kunal SriLaxmi Hemlatha Irfana Tejaswini Sumita Vinay Nandish Rohit
@@ -285,16 +379,202 @@ class SavingsAccount		SavingsAccount saObj = new SavingsAccount();
 	void printAccount() { }
 }
 
+class BankAccount
+{
+	data ( acno,acname,acbal)
+	 +
+	methods		  setBankAccount(....) {}  
+	/functions	   printBankAccount() { } 
 
-
+}
 
 
 		
 
+BankAccount bankAccObj1 = new 	BankAccount();
+ |		|	  |		|
+classname  refToObject  Allocator	constructor 
+
+		STACK			HEAP
+		|			|
+		local variables		data structure of the classes
+		
+					DATA AREA OF BANKACCOUNT
+
+				accountNumber   accountHolderName accountBalance
+				-------------------------------------------------
+				|  101		| Jack		 | 5000		|
+				-------------------------------------------------
+	    +------------------->100
+	    |
+	+---|---+			METHOD / FUNCTION AREA
+	| 100	|		
+	+-------+			setBankAccount(x,y,z) { }
+	bankAccObj1			printBankAccount() { }
+
+
+				accountNumber   accountHolderName accountBalance
+				-------------------------------------------------
+				| 102		| Jane		 | 6000		|
+				-------------------------------------------------
+	    +------------------->200
+	    |
+	+---|---+			
+	| 200	|		
+	+-------+		
+	bankAccObj2	
+
+
+				accountNumber   accountHolderName accountBalance
+				-------------------------------------------------
+				| 103		| Smith		 | 7000		|
+				-------------------------------------------------
+	    +------------------->300
+	    |
+	+---|---+			
+	| 300	|		
+	+-------+		
+	bankAccObj3	
 
 
 
 
+
+
+
+	Cricketer cricketerObj1  = new Cricketer();
+	cricketerObj1.cricketerName =  "Sachin Tendulkar"
+
+
+
+	class Cricketer
+	{
+		int cricketerRank;
+		String cricketerName;
+		int age;
+
+		void hitSixer() { }
+		void hitFour() { }
+	}
+
+	innovate a class 
+	with data and relevant function
+
+	BankAccount = acno,name,bal + setBa, print, withdraw,deposit
+
+	INNOVATE a class
+	which would be a unique creation among all of us
+
+----------------------------------------------------------------
+
+	Constructor
+
+
+		- is a special code block
+		that has the same name as of the 
+		enclosing class
+
+		- it DOESNOT have return type
+
+		- it is executed "automatically" during the
+		object creation process
+
+		- initialize the data of the object
+
+
+		class Account
+		{
+			Account() 
+			{
+ 
+			}
+		}
+
+		Account a = new Account();
+
+		-every class in java comes with a 
+		default constructor/implicit no-arg ctor
+
+		you can have either the implicit or explicit
+		but not both
+
+
+		- a ctor can take arguments
+		
+		class A
+		{
+			int x;
+
+			A(int p) {
+				x = p;
+			}
+			void foo() { }
+
+		}
+
+
+
+
+
+
+
+
+	OOPS concepts
+	------------------
+
+
+	1. Abstraction
+		it is the "what is?" part of an object
+		"what is" an ATM?
+
+		hiding the complexity of an object 
+		and providing its USAGE via simple accessible 
+		functions
+
+		- data abstraction 		- private
+		- procedural abstraction	- private
+		- class abstraction
+
+
+	2. Encapsulation
+
+		Binding of data with concerned functions
+		- private data with public functions
+		
+
+
+	3. Polymorphism
+
+		- ability of business entity to have multiple forms
+
+		a. class extention
+			
+
+			BankAccount
+			|acno,name,balance
+		--------------------------------------------
+		|		|		|
+	SavingsAccount	CurrentAccount 	 CreditAccount 
+	|rate		 overDraftLimit		 creditLimit,cashLimit
+	|
+FixedDepositAccount
+	|compoundInterest
+
+
+
+
+	
+	4. Inheritance
+
+	5. Object communication
+
+
+	
+
+
+
+
+	
 
 
 
