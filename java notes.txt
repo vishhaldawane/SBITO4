@@ -569,12 +569,196 @@ FixedDepositAccount
 	5. Object communication
 
 
+-----------------------------------------------------------------
+
+Inheritance
+	- reuse the code
+
+
+
+
+	A
+	| single-level
+	B
+	| multi-level
+	C
+
+	A	B	C
+	|	|	| multiple-level
+	-----------------
+		|
+		D
+
+
+			Inheritance
+			|
+	---------------------------
+	|			|
+	Derivation		Implementation
+	|			|
+	normal class		abstract class/interface
+	A			A
+	|			|
+	B			B
+
+  class A			abstract class A	interface A
+  {				{			{
+  
+  }				}			}
+  class B extends A		class B extends A	class B implements A
+  {				{			{
+
+  }				}			}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	Person
+	| age,gender,name
+	|
+	Student
+	| rollno,grade, stream
+	|
+	Employee
+	  empno,desg,dept, salary
+
+
+
 	
+	super() - to invoke ctor of the nearest super class
+	super.  - to invoke any function/data of the nearest super class
+
+	this() - to invoke ctor of the same class
+	this.  - to refer the function/data of the same class
+
+
+
+		Point2D
+		| x,y
+	----------------------------
+	|		|
+	Point3D		ColouredPoint2D
+	|z		| color
+	|
+ColouredPoint3D
+	|color
 
 
 
 
-	
+	Object
+	|isA
+	Person
+	| gender, age, name
+	| Address homeAddress;
+	| Address corrAddress;
+--------------------------
+		|isA
+		Student
+		| rollno, collegeName, stream, 
+		|
+	--------------------------
+			|isA
+			Employee
+			| empno, companyName, designation, salary
+
+
+
+
+	hasA - relationship
+
+	containment - composition
+
+	class WholeEntity
+	{
+		PartEntity pe = new PartEntity();
+
+	}
+
+	class Vehicle
+	{
+
+	}
+
+	class Car extends Vehicle //isA
+	{
+		Engine e= new Engine(); //hasA - vital  part
+
+	}
+
+
+	class Heart
+	{
+
+	}
+
+	class Mammal
+	{
+
+	}
+
+	class Human extends Mammal
+	{
+		Heart h = new Heart(); //hasA
+		Lung l1 = new Lung(); //hasA
+		Lung l2 = new Lung(); //hasA
+		Kidney k1 = new Kidney(); //hasA
+		Kidney k2 = new Kidney(); //hasA
+
+	}
+
+------------------------------------------------------
+
+	Passing "Object" as parameter to a function
+
+	Returning "Object" as a return value from a function
+
+
+
+
+
+	Innovate a unique program
+	to complete the association
+
+	isA	hasA	usesA	producesA
+
+
+	class Machine {
+		int serialNumber;
+		ctor/set/get/toString
+	}
+	class WashingMachine extends Machine //isA
+	{
+		String brandName;
+		int capacity;
+		WashingTub washTub = new WashingTub(); //hasA
+
+		Laundry wash(Cloth c, Water w, Electricity e, WashingPowder wp)
+		{
+			..
+			..
+			..
+			Laundry laundry = new Laundry();
+			return laundry;
+		}
+	}
+	class WashingTub { }
+	class Cloth { }
+	class Water  { }
+	class Electricity { }
+	class WashingPowder { }
+	class Laundry { }
+
+
 
 
 
