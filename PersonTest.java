@@ -6,7 +6,7 @@ public class PersonTest {
 		personObj.printPerson();
 		System.out.println("---------------");
 		
-		Person personObj1 = new Person('F', 65, "Putin", "Shanti Mahal", "Peace Road", "Shanti Nagar", "Prashant", "Heaven", 999999);
+		Person personObj1 = new Person('F', 65, "Putin", "Shanti Mahal", "Peace Road", "Shanti Nagar", "Prashant", "Heaven", 999999, "Aman Manzil", "Sukun Road", "Aman Nagar", "Aman", "Jannat", 777777);
 		personObj1.printPerson();
 		
 		System.out.println("---------------");
@@ -107,14 +107,16 @@ class Person
 	private char gender;
 	private int age;
 	private String name;
-	Address homeAddress ; //hasA
+	Address homeAddress ; //hasA - empty object
+	Address corrAddress ; //hasA - empty object
 
-	public Person(char gender, int age, String name, String area,String street, String city, String state, String country, int pin) {
+	public Person(char gender, int age, String name, String area,String street, String city, String state, String country, int pin, String area1,String street1, String city1, String state1, String country1, int pin1) {
 		super();
 		this.gender = gender;
 		this.age = age;
 		this.name = name;
 		homeAddress = new Address(area,street,city,state,country,pin); //
+		corrAddress = new Address(area1,street1,city1,state1,country1,pin1); //
 	}
 
 	
@@ -123,6 +125,8 @@ class Person
 		this.gender = gender;
 		this.age = age;
 		this.name = name;
+		homeAddress = new Address(); //blank object
+		corrAddress = new Address(); //blank object
 	}
 
 	@Override
@@ -133,8 +137,16 @@ class Person
 		System.out.println("GENDER : "+gender);
 		System.out.println("Age    : "+age);
 		System.out.println("NAME   : "+name);
-		if(homeAddress!=null)
+		if(homeAddress!=null) {
+			System.out.println("--- HOME ADDRESS ---");
 			homeAddress.printAddress();
+		}
+		
+		if(corrAddress!=null) {
+			System.out.println("--- CORR ADDRESS ---");
+			corrAddress.printAddress();
+		}
+		
 	}
 }
 
