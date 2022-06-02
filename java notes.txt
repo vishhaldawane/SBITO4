@@ -823,9 +823,9 @@ class		cannot be			may have partial
 
 	MusicalInstrument
 		|play();		
-	----------------------
-	|		|
-StringBased		AirBased
+	---------------------------------------------------
+	|		|			|
+StringBased		AirBased		DrumBased
 MusicalInstrument	MusicalInstrument
 	|tuneStr();	  |checkAir();
 -----------------	---------------
@@ -862,9 +862,9 @@ Interfaces
 					Instrument
 					| use();
 	--------------------------------------------------------------------------------------------------------
-	|			|		|				|			|
-MusicalInstrument	MedicalInstrument	ElectricalInstrument	ElectronicInstrument  MechanicalInstrument ......
-    |	play();			|		|
+	|1			|2					|				|			|
+MusicalInstrument	MedicalInstrument			ElectricalInstrument	ElectronicInstrument  MechanicalInstrument ......
+    |	play();			|					|
 ------------------	-----------------
 |	|	|	|	|
 SBMI	ABMI	DBMI	SMI	PMI
@@ -873,6 +873,12 @@ Guitar Flute	Dhol	Cutter GlucoMeter
 pluck();
 Violin				ECGMachine
 
+
+SBMI - StringBasedMusicalInstrument
+ABMI - AirBasedMusicalInstrument
+DBMI - DrumBasedMusicalInstrument
+SMI - SurgicalMedicalInstrument
+PMI - PathalogicalMedicalInstrument
 
 
 	Living
