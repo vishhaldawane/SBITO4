@@ -1,0 +1,29 @@
+
+
+
+
+	interfaces/abstract class
+
+		Machine
+		|
+		|extends
+		|
+		|   Mixing  Grinding  
+		|   |
+		Juicer
+		    Juice makeJuice(Fruit f) }
+			
+			Juice j = new MangoJuice();
+			return j;
+		    }
+
+	abstract class Juice { }
+
+	class MangoJuice extends Juice { }
+
+	abstract class Fruit
+	{
+	}
+	class Mango { 
+
+	}
