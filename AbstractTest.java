@@ -14,21 +14,32 @@ public class AbstractTest {
 		gs.draw();
 		gs.calculateArea();
 		gs.calculatePerimeter();
+		
+		System.out.println("------------------------");
+		
+		gs = new Rectangle(55, 66);
+		gs.draw();
+		gs.calculateArea();
+		gs.calculatePerimeter();
+		
+	
 	}
 }
 
 abstract class GeometricalShape
 {
-	final double PI=3.14;
+	final static double PI=3.14;
 	abstract void draw(); //undefined
 	abstract void calculateArea();
 	abstract void calculatePerimeter();
+	
+	
 }
 
 class Circle extends GeometricalShape //Circle is concrete
 {
 	double radius;
-	
+
 	Circle(double r) {
 		radius = r;
 	}
@@ -55,23 +66,41 @@ class Square extends GeometricalShape
 	Square(double s) {
 		side= s;
 	}
-	
 	void draw() {
 		System.out.println("Drawing a Sqaure....");
 	}
-
-	
 	void calculateArea() {
 		System.out.println("Calculating the area of the Sqaure....");
 		double area = side * side;
 		System.out.println("Area of the square : "+area);
 	}
-
-	
 	void calculatePerimeter() {
 		System.out.println("Calculating the perimeter of the Sqaure....");
 		double periphery = 4 * side;
 		System.out.println("Perimeter of the square : "+periphery);
+	}
+}
+
+class Rectangle extends Square 
+{
+	double side2;
+	
+	Rectangle(double s1, double s2) {
+		super(s1);
+		side2= s2;
+	}
+	void draw() {
+		System.out.println("Drawing a Rectangle....");
+	}
+	void calculateArea() {
+		System.out.println("Calculating the area of the Rectangle....");
+		double area = side * side2;
+		System.out.println("Area of the Rectangle : "+area);
+	}
+	void calculatePerimeter() {
+		System.out.println("Calculating the perimeter of the Rectangle....");
+		double periphery = 2*(side + side2);
+		System.out.println("Perimeter of the Rectangle : "+periphery);
 	}
 	
 }
