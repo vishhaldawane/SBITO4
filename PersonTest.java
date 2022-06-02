@@ -1,6 +1,31 @@
 
 public class PersonTest {
 	public static void main(String[] args) {
+ 
+		//Living l = new Employee('F', 25, "Janet",38,"Thakur College","IIIT", 1234, "JP Morgan", "Developer", 345000);
+		//l.live();
+		
+		//Object slicing 
+		Solving w  = new Employee('F', 25, "Janet",38,"Thakur College","IIIT", 1234, "JP Morgan", "Developer", 345000);
+		w.work(); //Employee
+		w.chat(); // Chatting
+		w.live(); // Living
+		w.signIn(); //Employee - SingingIn
+		w.signOut(); //Employee - SingingOut
+		w.study(); //Student
+		w.solve(); //Student
+		
+		
+		Employee e  = new Employee('F', 25, "Janet",38,"Thakur College","IIIT", 1234, "JP Morgan", "Developer", 345000);
+		e.work(); //Employee
+		e.chat(); // Chatting
+		e.live(); // Living
+		e.signIn(); //Employee - SingingIn
+		e.signOut(); //Employee - SingingOut
+		
+		e.study(); //Student
+		e.solve(); //Student
+		
 		
 		Person personObj = new Person('F', 22, "Jane");
 		personObj.printPerson();
@@ -102,7 +127,11 @@ class Address
 	}
 	
 }
-class Person
+interface Living
+{
+	void live();
+}
+class Person implements Living
 {
 	private char gender;
 	private int age;
@@ -110,6 +139,9 @@ class Person
 	Address homeAddress ; //hasA - empty object
 	Address corrAddress ; //hasA - empty object
 
+	public void live() { 
+		
+	}
 	public Person(char gender, int age, String name, String area,String street, String city, String state, String country, int pin, String area1,String street1, String city1, String state1, String country1, int pin1) {
 		super();
 		this.gender = gender;
@@ -150,12 +182,30 @@ class Person
 	}
 }
 
-class Student extends Person
+interface Studying {
+	void study();
+}
+interface Chatting {
+	void chat();
+}
+interface Solving {
+	void solve();
+}
+class Student extends Person implements Studying, Chatting, Solving   
 {
 	private int rollNumber;
 	private String collegeName;
 	private String streamName;
 	
+	public void solve() {
+		
+	}
+	public void chat() {
+		
+	}
+	public void study() {
+		
+	}
 	public Student(char gender, int age, String name, int rollNumber, String collegeName, String streamName) {
 		super(gender, age, name);
 		this.rollNumber = rollNumber;
@@ -176,14 +226,33 @@ class Student extends Person
 	}
 
 }
-
-class Employee extends Student
+interface Working
+{
+	void work();
+}
+interface SigningIn
+{
+	void signIn();
+}
+interface SigningOut {
+	void signOut();
+}
+class Employee extends Student implements Working, SigningIn, SigningOut 
 {
 	private int employeeNumber;
 	private String companyName;
 	private String designation;
 	private double basicSalary;
 	
+	public void signIn() {
+		
+	}
+	public void signOut() {
+		
+	}
+	public void work() {
+		
+	}
 	public Employee(char gender, int age, String name, int rollNumber, String collegeName, String streamName,
 			int employeeNumber, String companyName, String designation, double basicSalary) {
 		super(gender, age, name, rollNumber, collegeName, streamName);

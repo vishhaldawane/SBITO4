@@ -1,3 +1,11 @@
+	Arshad  Rohit	Pratik  Kunal SriLaxmi Hemlatha Irfana Tejaswini Sumita Vinay Nandish Rohit
+	|
+Jayant--+
+	|
+	Nischal Prince Shrilekha Gaurav Abhishek Yash Vachaspati Dipesh Pushpendra Karan
+
+
+
 
 		Enterprise Applications
 
@@ -94,9 +102,6 @@
 
 https://github.com/vishhaldawane/SBITO4
 
-Arshad  Rohit	Pratik  Kunal SriLaxmi Hemlatha Irfana Tejaswini Sumita Vinay Nandish Rohit
-|
-Gaurav Abhishek Yash Vachaspati Dipesh Pushpendra Karan
 
 Project
 --------
@@ -757,6 +762,152 @@ ColouredPoint3D
 	class Electricity { }
 	class WashingPowder { }
 	class Laundry { }
+
+
+
+
+		final		static		abstract
+
+============================================================
+field		is a constant	SHARABLE	NA
+		cannot be	data across
+		changed		all the objects
+				of the class
+------------------------------------------------------------
+method		cannot be	to refer the	partial contract
+		overridden	other static	of a class
+				members
+------------------------------------------------------------
+class		cannot be			may have partial
+		extended			contract
+------------------------------------------------------------
+
+
+
+	non-static			static
+	fields				fields
+	|				|
+	object's member			class's member
+
+
+		abstract = incomplete
+
+
+	abstract class GeometricalShape
+	{
+		
+	}
+
+	class Circle extends GeometricalShape //isA
+	{
+		void draw()
+		{
+
+		}
+	} 
+		
+
+			GeometricalShape
+			| 3 methods are here- declared as abstract 
+		---------------------
+		|		|
+		Circle		Square
+		|radius		|side
+		|		|
+		Ellipse		Rectangle <=== 
+		vRadius		  side2
+
+
+
+
+
+	MusicalInstrument
+		|play();		
+	----------------------
+	|		|
+StringBased		AirBased
+MusicalInstrument	MusicalInstrument
+	|tuneStr();	  |checkAir();
+-----------------	---------------
+|	 |		|	|
+Guitar	 Violin		Flute	Trumpet
+|	 |		|	|
+Electric Cello		
+Guitar
+
+
+
+
+	Electricity 
+
+Interfaces
+---------------
+	- pure type
+
+	- pure abstract class
+
+	- can only have abstract methods
+
+	- it cannot have non-abstract methods
+
+	- by default methods in this are public, abstract
+
+	- by default fields in this are public final and static
+
+
+
+
+
+
+					Instrument
+					| use();
+	--------------------------------------------------------------------------------------------------------
+	|			|		|				|			|
+MusicalInstrument	MedicalInstrument	ElectricalInstrument	ElectronicInstrument  MechanicalInstrument ......
+    |	play();			|		|
+------------------	-----------------
+|	|	|	|	|
+SBMI	ABMI	DBMI	SMI	PMI
+|tune()	|	|	|	|
+Guitar Flute	Dhol	Cutter GlucoMeter
+pluck();
+Violin				ECGMachine
+
+
+
+	Living
+	|
+	Person
+	|	   Studying	Chatting	Solving
+	---------   |		|		|	
+		|   -----------------------------
+		|     |	
+		Student
+		|		Working	SigningIn	SigningOut
+		-----------------  |	  |		 |
+				|  ------------------------
+				|    |
+				Employee
+
+
+
+
+
+
+
+
+
+
+		GeometricalShape
+			| 3 methods are here- declared as abstract 
+		---------------------
+		|		|
+		Ellipse		Rectangle
+		|radius		|side,side2
+		|vradius	|
+		|		|
+		Circle		Sqaure
+
 
 
 

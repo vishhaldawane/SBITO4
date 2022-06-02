@@ -7,6 +7,7 @@ public class AbstractTest {
 		gs.draw();
 		gs.calculateArea();
 		gs.calculatePerimeter();
+		gs.fillColor();
 		
 		System.out.println("------------------------");
 		gs = new Square(5);
@@ -14,6 +15,7 @@ public class AbstractTest {
 		gs.draw();
 		gs.calculateArea();
 		gs.calculatePerimeter();
+		gs.fillColor();
 		
 		System.out.println("------------------------");
 		
@@ -21,7 +23,7 @@ public class AbstractTest {
 		gs.draw();
 		gs.calculateArea();
 		gs.calculatePerimeter();
-		
+		gs.fillColor();
 	
 	}
 }
@@ -33,6 +35,9 @@ abstract class GeometricalShape
 	abstract void calculateArea();
 	abstract void calculatePerimeter();
 	
+	void fillColor() { //non-abstract function | function with body
+		System.out.println("getting the bounds..and filling the color..");
+	}
 	
 }
 
