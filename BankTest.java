@@ -1,17 +1,27 @@
+import bankexception.InsufficientBalanceException;
 import bankexception.OpeningBalanceException;
 
 public class BankTest {
 	public static void main(String[] args) {
-		BankAccount baObj1;
+		BankAccount baObj1 = null;
 		try {
 			
-			baObj1 = new BankAccount(101,"Jack",2000);
+			baObj1 = new BankAccount(101,"Jack",122000);
+			
 			System.out.println("baObj1 "+baObj1);
 			
 		} catch (OpeningBalanceException e) {
 		
 			System.out.println("Some Problem during account creation : "+e);
 		}
+		
+		System.out.println("Trying to withdraw.....");
+		baObj1.withdraw(45000);
+		
+		System.out.println("Withdraw is complete....");
+		
+		System.out.println("baObj1 "+baObj1);
+		System.out.println("End of main...");
 		
 	}
 }
@@ -21,7 +31,7 @@ class BankAccount {
 	private String accountHolder;
 	private double accountBalance;
 	
-	public BankAccount(int accountNumber, String accountHolder, double accountBalance) throws OpeningBalanceException 
+	public BankAccount(int accountNumber, String accountHolder, double accountBalance) throws OpeningBalanceException  
 	{
 		super();
 		System.out.println("BankAccount ctor called...");
@@ -41,6 +51,17 @@ class BankAccount {
 		}
 		
 		System.out.println("BankAccount ctor is OVER...");
+	}
+	
+	void withdraw(double amountToWithdraw) {
+		if(accountBalance < amountToWithdraw) {
+			InsufficientBalanceException e = new InsufficientBalanceException("Insufficient balance at the source account...");
+			throw e;
+		}
+		else {
+			System.out.println("Withdrawing..."+amountToWithdraw);
+			this.accountBalance = accountBalance - amountToWithdraw;
+		}
 	}
 
 	@Override
