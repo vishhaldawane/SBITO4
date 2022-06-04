@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+
 //inTention + atTention
 
 /*
@@ -17,12 +20,12 @@
  */
 public class GenericTest {
 	public static void main(String[] args) {
-		/*Egg egg1 = new Egg("Hen","White",7.00f,50.0f);
+		Egg egg1 = new Egg("Hen","White",7.00f,50.0f);
 		Egg egg2 = new Egg("Hen","White",7.00f,55.0f);
 		Egg egg3 = new Egg("Hen","White",7.00f,52.0f);
 		Egg egg4 = new Egg("Hen","White",7.00f,51.0f);
 		Egg egg5 = new Egg("Hen","White",7.00f,50.0f);
-		Egg egg6 = new Egg("Hen","White",7.00f,55.0f);*/
+		Egg egg6 = new Egg("Hen","White",7.00f,55.0f);
 		
 		Egg eggArray[] = new Egg[12]; //only 12 egg references are created | no 12 egg's object here
 		eggArray[0]  = new Egg("Hen","White",7.00f,55.0f);
@@ -38,12 +41,46 @@ public class GenericTest {
 		eggArray[10] = new Egg("Hen","White",7.00f,58.0f);
 		eggArray[11] = new Egg("Hen","White",7.00f,53.0f);
 		
-		System.out.println("Adding 13th egg....");
-		eggArray[12] = new Egg("Hen","White",7.00f,53.0f);
+		//System.out.println("Adding 13th egg....");
+		//eggArray[12] = new Egg("Hen","White",7.00f,53.0f);
 		
 		for (int i = 0; i < eggArray.length; i++) {
 			System.out.println(eggArray[i]);
 		}
+		System.out.println("------------------");
+		
+		
+		ArrayList<Egg> eggContainer = new ArrayList<Egg>();
+		System.out.println("Egg Container is created....");
+		
+		System.out.println("Adding egg1 ");
+		eggContainer.add(egg1);
+		
+		System.out.println("Adding egg2 ");
+		eggContainer.add(egg2);
+		
+		System.out.println("Adding egg3 ");
+		eggContainer.add(egg3);
+		
+		System.out.println("Adding egg4 ");
+		eggContainer.add(egg4);
+		
+		System.out.println("Adding egg5 ");
+		eggContainer.add(egg5);
+		
+		System.out.println("Adding egg6 ");
+		eggContainer.add(egg6);
+		
+		System.out.println("----iterating----");
+		
+		Iterator<Egg> eggIter = eggContainer.iterator();
+		while(eggIter.hasNext()) {
+			Egg theEgg = eggIter.next();
+			System.out.println("The Egg : "+theEgg);
+		}
+		
+		
+		
 	}
 }
 class Egg
