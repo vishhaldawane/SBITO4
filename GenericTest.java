@@ -78,8 +78,17 @@ public class GenericTest {
 			Egg theEgg = eggIter.next();
 			System.out.println("The Egg : "+theEgg);
 		}
+		System.out.println("-----for each way----");
 		
+		for (Egg egg : eggContainer) {
+			System.out.println("The Egg : "+egg);
+		}
 		
+		System.out.println("-----for .size() and .get() way----");
+		
+		for (int i = 0; i < eggContainer.size(); i++) {
+			System.out.println("Egg : "+eggContainer.get(i));
+		}
 		
 	}
 }
