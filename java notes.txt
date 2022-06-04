@@ -919,4 +919,353 @@ PMI - PathalogicalMedicalInstrument
 
 
 
+	packages	- similar to "folders" on the operating system
+	---------
+
+	to organize the relevant classes in a folder
+
+
+	to make a package 
+	package  <-- must be the first statement 
+
+	to avail the package
+	import
+			jungle <--- main folder
+			|
+	-------------------------------------------
+	|	|	|	|	     |
+	cave	river	tree	mountains   use <-- sub-folders
+	|	|	 |	    |	     |
+	Tiger  Fish      Parrot	  Bear	   JungleTest <-- classes
+	Lion   Crocodile Monkey
+
+
+
+
+	Four access specifiers in JAVA
+
+
+	1.           <-- default/friendly/accessible within the same
+			folder/package     
+	2. private
+	3. protected
+	4. public
+
+
+
+
+
+
+	Exception 	handling
+	----------	----------
+		|
+		runtime error
+
+
+			Errors
+			|
+	------------------------------------------------------
+	|	    |		|	  |	  	|
+	compile	  runtime	library	 fatal		logical
+	|	  |		|	   |		|
+	syntax	exception	missing	  death		4+4=16
+				libraries  of an
+					  application
+
+
+			Object
+			|
+			Throwable
+			|
+		-------------------------
+		|			|
+		Error		     Exception
+					| [ CHECKED TYPE ]
+		----------------------------------------------------
+		|			|		|	|
+	RuntimeException	OpeningBalanceException	|	|
+	| [ UNCHECKED TYPE ]	NegativeAccountNumberException	|
+	| IGNORED BY THE COMPILER	InvalidAccountHolderNameException
+	| UNCHECKED BY THE COMPILER
+----------------------------------------------------------
+|			|			  |
+ArithmeticException  InsufficientBalanceException |
+				  IncomeProofException ( for deposit
+					more than 50k)
+
+	try
+	{
+		code
+	}
+	catch() { //handler1
+
+	}
+	catch() { //handler2
+
+	}
+	catch() { //handler3
+
+	}
+		   (2.5)
+		+---------->JVM drops it - by terminating your app			
+		|
+		(1)	   (2)	  (2.1)
+---->	int z = x/y; -----JVM---if y!=0 ---> CPU
+|			   |(2.2)
+|			if y==0
+|			   | (2.3)
+|	ArithmeticException e = new ArithmeticException("/ by zero");	
++-<----------<---throw e; (2.4)
+		
+				
+
+	void fundTransfer(sa,ta,amt)
+	{
+		check for ta
+		if ta exist
+		then
+			check for sa
+			if sa exist
+			then
+				check for suff bal in sa
+				if sa.bal is suff
+				then
+					sa.withdraw(amt)
+					ta.deposit(amt)
+				else
+					insuff balance at sa
+			else
+				sa not found
+		else
+			ta not found
+
+	}
+
+	void fundTransfer(sa,ta,amt)
+	{
+		try
+		{
+			open the network
+			start logging
+			measure the security
+			
+				check for ta
+				check for sa
+				check for suff bal in sa
+				sa.withdraw(amt)
+				ta.deposit(amt)
+
+			release the security
+			stop the logging
+			close the network
+		}
+		catch(if ta NOT exist){ handler code}
+		catch(if sa NOT exist){ handler code}
+		catch(if sa.bal NOT suff){ handler code}
+		finally {
+			if(not released)
+				release the security
+			if (not stopped)
+				stop the logging
+			if(not closed)
+				close the network
+		}
+
+	}
+
+------------------------------------------------------------
+	Thread 
+	|
+	set of statements
+	set of instructions
+
+
+Accounts
+----------
+------------------------------------
+|101  Suresh  70000    <--t1	    
+------------------------------------
+102  Dinesh  60000
+103  Rajesh  70000
+104  Haresh  80000
+105  Zubair  90000
+
+			Cash Deposit Counter
+	
+	
+	Teller1			Teller2			Teller3
+	|			|			|
+	getBalance()		getBalance()		getBalance()
+	|			|			|
+	calcAmt()		calcAmt()		calcAmt()
+	|			|			|
+	setBalance()		setBalance()		setBalance()
+	|			|			|
+	Customer1		Customer2		Customer3
+time	10.30			10.30			10.30
+a/c	101			101			101
+cash	5000/-			7000/-			8000/-
+deno..	100Rs.			50Rs.			2000Rs.
+count	50notes			140Notes		4notes
+
+	Customer4		Customer5
+	
+
+	Thread synchronization
+
+
+
+
+	Eatable			Runnable <--interface
+	|eat();			| run();
+	----------------     -----------|
+	|		|    |		|
+	|		|    |		|
+	FoodItem	|    |	Stone	Thread <--regular class
+	|eat(){}	|    |	|	|run() { }
+	|prepare(){}	|    |	|	|start() { } ------ > Thread Scheduler
+	|		|    |	|	-----------------------------
+	|		|    |  |		|	|	|	|	|
+	Samosa		     Chalk		Car	Train	Ship	Flight
+
+
+
+
+
+
+		
+Generics and Collections
+
+
+Components Orthogonal Space
+
+
+			Content
+			|  SoftDrink
+			|  FriedRice
+			|  PaneerChilly
+			|  Noodles
+	        +---------------+
+		|		|
+	Container		Algorithm
+	|	|		|	|
+     Bottle	-----------------	drink()
+     Plate		|		eat()
+     		     Iterator		
+			|
+			Straw
+			Spoon
+			Fork
+			Chopsticks
+
+
+Egg egg6 = new Egg("Hen","White",7.00f,55.0f);
+
+	Stack				Heap
+	|
+
+
+				type	color	cost	weight
+				--------------------------------
+				|	|	|	|	|
+				--------------------------------
+	    +----------------->	100
+	+---|----+
+	|  100	|
+	+-------+
+	egg6
+
+
+Egg eggArray[] = new Egg[12]; 
+
+				 0	 1        2        3	 4	 5	 6	 7	 8	 9	 10	 11	
+				-------------------------------------------------------------------------------------------------
+				|  600	|	|	|	|	|	|	|	|	|	|	|	|
+				--- |----------------------------------------------------------------------------------------------
+	    +----------------->	200 |
+	+---|----+		    +type color cost weight
+	|	|		    ---------------------------
+	|  100	|		    |    |     |    |      |
+	+-------+		   ---------------------------
+	eggArray		    600
+
+	
+
+
+interface A {
+  void foo();
+}
+interface B extends A {
+  void far();
+}
+interface C extends B {
+  void fun();
+}
+class D implements C {
+
+}
+
+	Object
+	|
+AbstractCollection
+	|
+AbstractList
+	|		Iterable <-- interface - java.lang
+	|		  |3
+	|		Collection <-- interface - java.util
+	|		  |20
+	|	---------------------------
+	|	|duplicates		|unique
+	|	List			Set <-- interfaces
+	|	|30			|
+	|--------------------	-------------------------
+	|		|	|		|
+	ArrayList   LinkedList  TreeSet		HashSet <-- classes
+
+interface Collection extends Iterable {
+}
+interface List extends Collection {
+}
+class ArrayList extends AbstractList implements List
+{
+
+}
+
+
+
+
+Growable array
+---------------
+	
+
+	int i[] = new int[10];
+
+	ArrayList i = new ArrayList();
+
+
+	Store these          eggs in the
+
+	ArrayList - Log ( logMsg,logType,logDateTime, logLevel)
+	LinkedList - Contact ( name,email,mobilenumber,facebookId)
+	TreeSet - ChemicalElement ( atomicNumber,atomicWeight,atomic
+				formula, atomicName)
+
+	HashSet - Book ( bookId,bookTitle,bookAuthor,bookPrice,
+				numberOfPages,bookEdition)
+
+
+	class Log {  }
+	class Contact { }
+	class ChemicalElement { }
+	class Book { }
+
+
+	with packages 
+	with appropriate exception  handling
+	with innovativeness of multithreading
+
+	
+
+
+
 
