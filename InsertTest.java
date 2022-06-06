@@ -38,12 +38,16 @@ public class InsertTest {
 			
 			System.out.println("Enter new emp number : " );
 			int empNumber = scan1.nextInt();
+			//hint : run the select query with Statement interface
+			// to find if employee exists - if (rs.next()) 
+			// if found, EmployeeAlreayExistsException thrown...Checked Exception
 			
 			System.out.println("Enter new emp name   : " );
-			String empName = scan2.next();
+			String empName = scan2.nextLine();
+			
 			
 			System.out.println("Enter new emp job    : " );
-			String empJob = scan3.next(); //new york
+			String empJob = scan3.nextLine(); //new york
 			
 			System.out.println("Enter new emp manager: " );
 			int managerCode= scan4.nextInt();

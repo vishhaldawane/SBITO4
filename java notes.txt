@@ -1,8 +1,8 @@
-	Arshad  Rohit	Pratik  Kunal SriLaxmi Hemlatha Irfana Tejaswini Sumita Vinay Nandish Rohit
-	|
-Jayant--+
-	|
-	Nischal Prince Shrilekha Gaurav Abhishek Yash Vachaspati Dipesh Pushpendra Karan
+	Rohit	Pratik  Kunal SriLaxmi Hemlatha Irfana Tejaswini Sumita Vinay Nandish Arshad  
+Jayant--|
+Nischal |
+Prince  |
+	Shrilekha Gaurav Abhishek Yash Vachaspati Dipesh Pushpendra Karan
 
 
 
@@ -1219,8 +1219,16 @@ AbstractList
 	|	List			Set <-- interfaces
 	|	|30			|
 	|--------------------	-------------------------
-	|		|	|		|
-	ArrayList   LinkedList  TreeSet		HashSet <-- classes
+	|		|	|		  |
+	ArrayList   LinkedList  TreeSet		  HashSet <-- classes
+	Log	    Contact	ChemicalElements  Book
+
+
+			Map ---> producesA --> Collection
+			|
+		-----------------
+		|		|
+		TreeMap		HashMap
 
 interface Collection extends Iterable {
 }
@@ -1267,5 +1275,119 @@ Growable array
 	
 
 
+
+
+			 root <-- element1
+			  |  47   
+			  |
+		-------------------------
+		|			|
+		L			R
+		|13			|79
+	-----------------	-------------------
+	|		|	|		|
+	3		26
+	|
+-------------
+|	    |
+	   
+
+
+
+	50000
+b1	31 + 101 + 500 + 1000
+
+	632
+
+
+	50000
+b2     31 + 101 + 500 + 1000
+
+	632
+
+	50000
+b1 = 101   1300		--- result 131 -- 5361
+
+	55000
+b2 = 101  1300
+
+
+public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((bookNo == null) ? 0 : bookNumber.hashCode());
+		result = prime * result + ((numberOfPages == null) ? 0 : numberOfPages.hashCode());
+		return result;
+	}
+
+
+
+	JDBC
+	--------------
+	Java Database Connectivity
+
+java.sql
+
+***following is NOT an inheritance diagram
+
+	JavaApplication			Database
+	|				| Oracle <-- DB (1)
+	+--------------Driver-----------+ MS-SQL Server
+			|		  IBM-DB2/Sybase
+			|		  HyperSQLDB
+		   OracleDriver	(2)
+			|usesA
+		DriverManager - 3. register the driver, 
+			|	4. connect to the DB
+			|
+	-----------------------------------------------
+	|		|			|
+	Statement	PrepreredStatement	CallableStatement
+	|		|			|
+	SELECT/DELETE	INSERT/UPDATE/DELETE	PROCEDURE/FUNCTIONS
+
+
+
+	1. LOAD THE DRIVER
+		C:\app\PC-2\product\18.0.0\dbhomeXE\jdbc\lib
+		ojdbc8_g.class
+
+	2. CONNECT TO THE DB
+	------------------------------------
+	3. MAKE A STATEMENT OF YOUR CHOICE
+	4. RUN THAT STATEMENT AND ACQUIRE RESULT IF ANY
+	5. PROCESS THE RESULT IF U HAVE
+	6. CLOSE THE RESULT, CLOSE THE STATMENET, CLOSE THE CONN
+
+
+
+
+
+	jar -cvf   birds.jar  Crow.class Sparrow.class Eagle.class
+
+		-c create
+		-v verbose
+		-f filename
+
+
+	jar -tvf  jarfilename
+
+		-t means table of contents
+
+	jar -uvf  jarfilename  NewClassFilesToBeAdded HERE
+
+		-u update the jar
+	
+	jar -xvf jarfilename  specificClassToExtract
+
+		-x  extract
+
+	
+		InsertTest - EmployeeAlreadyExistException
+		UpdateTest - EmployeeeNotFoundException
+		DeleteTest - EmployeeeNotFoundException
+
+
+	
 
 
