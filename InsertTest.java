@@ -22,6 +22,8 @@ public class InsertTest {
 					"system", "sysgitc");
 			System.out.println("connected to the db...."+conn);
 			
+			conn.setAutoCommit(false); //not to begin a auto commit
+			
 			System.out.println("Trying to create PreparedStatement...");
 			PreparedStatement pst = conn.prepareStatement("insert into emp values (?,?,?,?,?,?,?,?)");
 			System.out.println("PreparedStatement created : "+pst);
@@ -36,15 +38,24 @@ public class InsertTest {
 			Scanner scan7 = new Scanner(System.in);
 			Scanner scan8 = new Scanner(System.in);
 			
+			Scanner scan9 = new Scanner(System.in);
+			
 			System.out.println("Enter new emp number : " );
 			int empNumber = scan1.nextInt();
+			
+			Statement statement = conn.createStatement();
+			ResultSet rs = statement.executeQuery("select * from emp where empno="+empNumber);
+			if(rs.next()) {
+				EmployeeAlreadyExistsException ex = new EmployeeAlreadyExistsException("Employee number already present : "+empNumber);
+				throw ex;
+			}
+			
 			//hint : run the select query with Statement interface
 			// to find if employee exists - if (rs.next()) 
 			// if found, EmployeeAlreayExistsException thrown...Checked Exception
 			
 			System.out.println("Enter new emp name   : " );
 			String empName = scan2.nextLine();
-			
 			
 			System.out.println("Enter new emp job    : " );
 			String empJob = scan3.nextLine(); //new york
@@ -76,9 +87,20 @@ public class InsertTest {
 			
 			int rowsInserted = pst.executeUpdate();
 			
-			System.out.println("Statement executed : rows created : "+rowsInserted);
-			pst.close();			conn.close();
+			System.out.println("Please confirm (yes/no) to save this record ? ");
+			String ans = scan9.next();
 			
+			if(ans.equalsIgnoreCase("yes")) {
+				conn.commit();
+				System.out.println("Statement executed : rows created : "+rowsInserted);
+			}
+			else if(ans.equalsIgnoreCase("no")) {
+				conn.rollback();
+				System.out.println("Record Dicarded....");
+			} 
+			
+			
+			pst.close();			conn.close();
 			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
