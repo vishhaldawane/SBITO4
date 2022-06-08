@@ -1,9 +1,29 @@
+
+
+	6 things - 1hour 
+
+	D H Y A N A M
+
+D	10 - detox - 2 glass water in copper vessel 
+		and sit in indian 
+H	05 - hand written affirmations 
+Y	15 - Yoga
+A	10 - AtmaSadhana - meditation - doing nothing
+N	05 - navigated visualization
+A	15 - Atma vikas - book reading
+M	05 - main priorities
+
+
+you cannot decide your future
+but you can decide your habits
+and your habits will decide your future
+
+
 	Rohit	Pratik  Kunal SriLaxmi Hemlatha Irfana Tejaswini Sumita Vinay Nandish Arshad  
 Jayant--|
 Nischal |
 Prince  |
 	Shrilekha Gaurav Abhishek Yash Vachaspati Dipesh Pushpendra Karan
-
 
 
 
@@ -1389,5 +1409,417 @@ java.sql
 
 
 	
+
+
+
+	Java - DAO design pattern
+
+
+	DATA ACCESS OBJECT
+	|
+	isolate the low level data accessing logic
+
+	1. Model - POJO - plain old java object
+
+	below is the table structure - emp 
+	 EMPNO
+	 ENAME
+	 JOB
+	 MGR
+	 HIREDATE
+	 SAL
+	 COMM
+	 DEPTNO
+
+	according to the table, design your model - pojo
+
+	class Employee
+	{
+	 EMPNO
+	 ENAME
+	 JOB
+	 MGR
+	 HIREDATE
+	 SAL
+	 COMM
+	 DEPTNO
+	}
+
+	
+
+	2. DAO interface	
+		to expose the methods to operate with POJO
+
+
+	3. DAO interface implementation
+
+	
+
+
+
+
+
+
+		POJO	POJO-INTERFACE	POJO-INTERFACE-IMPL
+		|		|		|
+		Employee EmployeeDAO	EmployeeDAOImpl
+		|		|		|
+		fields		CRUD		CRUD implementation
+		|		|		|
+		8		declared	defined
+
+
+
+			Vechile <-- interface
+			   |transport();          Flying
+		--------------------------------+ | Landing
+		|		|		| | |
+	LandVehicle	SeaVehicle	   AirVehicle <--- abstract
+	|		|		  |
+	drive();	sail();		fly(); landing();
+					|
+					|
+				-----------------------------------
+				|	|	|	    |
+			    Flight   AirBaloon HeliCopter  Rocket
+				|
+		----------------------------
+		|	|		|
+   CommercialFlight   FighterFlight  CargoFlight
+
+
+
+	1. database table	EMP
+	2. pojo 		Employee
+	3. dao layer - 		EmployeeDAO, EmployeeDAOImpl
+
+	4. service layer - core java
+
+	5. controller layer - spring
+
+	6. ui/presentation layer - angular
+
+
+
+
+1 Applicant Module
+2 BankApplicant Admin module
+3 DashBoard - View Balance, Edit Mobile, Edit Email, View Profile
+4 Payee Management - view, add, edit, delete, view all
+5 Fund Transfer module - NEFT, RTGS, IMPS transfer
+6 Statement module - monthly statement, yearly statement, custom,
+			pdf to be mailed,
+			dr,cr,datewise,amount wise
+
+LTI - 60 - 10 teams 6 members - 10 days
+
+	online shopping
+	online banking
+	scheme for farmers
+	national scholarship
+	airline reservation
+	bus reservation
+	
+	
+	10 training - 10  = 20 parameters	= 200
+
+	
+	
+
+1. Vinay		- BankApplicant Module
+	Vachaspati
+	Karan	
+
+2. Nandish		- Payee Management
+	Sreelekha
+	Pushpendra
+	Pratik
+
+3. Jayant		- DashBoard
+	Hemlatha
+	Yash
+	Prince	
+
+4. Rohit - Fund Transfer module
+	Rohit
+	Srilaksmi
+	Deepesh
+
+5. Gaurav - Statement module
+	Arshad	
+	Sumita
+	Nischal
+
+6. Kunal - BankApplicant Admin module
+	Irfana
+	Tejaswini
+	Abhishek
+
+
+			8 tables
+
+	t1	t2	t3	t4	t5	t6	t7	t8
+	|		|			|
+	|	|		|
+			|	|	|
+	jayant		x		y
+
+
+
+	javadoc -package 
+	movie/AssociationTest.java 
+	movie/artist/Artist.java 
+	movie/lyrics/Lyrics.java 
+	movie/music/Music.java 
+	movie/song/Song.java 
+	movie/voice/Voice.java
+
+	javadoc *.java
+
+
+	public static final float PI=3.14f; -- universal constant
+
+
+	non-static			static	
+	function			function
+					
+
+	class Circle
+	{
+		public static final float PI=3.14f; 
+		
+
+	}
+
+	class Car
+	{
+		private String final numberPlate;
+
+	}
+
+	Car c1 = new Car();
+	Car c2 = new Car();
+	Car c3 = new Car();
+------------------------------------------------------------------------
+	
+
+	Maven
+
+		Project Management Tool
+
+
+	Sachin
+
+	Home		TCS		SBI
+	|		|		|
+	Machine1	Machine2	Machine3
+	|		|		|
+	Java 1.8	Java 17		Java 11
+	Oracle 12	Oracle 14	Oracle 18
+	Hibernate4.5	Hibernate 5	Hibernate 5.2
+	Spring 4.0	Spring 5	Spring 5.4
+	|		|		|
+	maven
+	project
+	|
+	pom.xml		
+	|
+	declare
+	dependencies
+	|java 14
+	|oracle 21
+	|Hibernate 6.2
+	|spring 6.4
+	|
+	.m2
+	|
+	repository
+
+
+
+		FirstProject
+		|
+	--------------------------
+	|		|
+	src		pom.xml
+	|
+-------------------------
+|		|	
+main		test
+|		|
+---------	java	
+|	|	 test cases are here
+java	resources
+|	|
+*.java	xml/properties files
+
+
+			space+time+situation
+	TKI model
+
+	100	A|
+		s|  Competing		Collaborativeness
+		s|
+		e|
+		r|
+		t|
+		i|		compromise
+		v|
+		e|
+		n|
+		e|
+		s|  Avoding		Accomodate	
+		s|
+	0	 +----------------------------------------->  100
+			C o o p e r a t i v e n e s s
+
+
+
+
+
+
+
+
+
+
+			ORM 	framework
+					|
+				semi-developed application
+
+	ORM - Object Relational Mapping
+		|	 |
+	      java 	database
+	      Object	table
+
+
+	class 	is not a table
+	table   is not a class
+
+	
+	object  is not a  row
+	row     is not an object
+
+
+
+
+	class Dept
+	{
+		int deptno;
+		String dname;
+		String loc;
+		set/get
+	}
+	Dept d1 = new Dept(10,"Accounting","NY");
+	Dept d2 = new Dept(20,"Purchase","ND");
+	Dept d3 = new Dept(30,"Sales","NJ");
+			
+			JDBC CODE - boiler plate code
+
+		1. load the driver
+		2. connect to the db
+		3. make a statement
+		4. execute the statement - 
+			insert into dept values (?,?,?)
+			<---------> XXXX <------------>
+		5. commit
+
+	dept
+	--------
+	deptno	dname		loc
+	10	Accounting	NY	 <--rows
+	20	Purchase	ND
+	30	Sales		NJ
+
+
+
+			Hibernate 
+
+
+	Employee		Customer
+	EmployeeDAO		CustomerDAO
+	EmployeeDAOImpl		CustomerDAOImpl
+		5			5
+				
+
+			JPA
+			|
+	     Java Persistence API
+			|
+	storing java object on the database as row
+
+
+		Hibernate		JPA
+		|			|
+	---------------		---------------------
+	|			|
+	Employee		1. Employee [ annotations ]
+	Employee.hbm.xml	X
+	hibernate.cfg.xml	2. META-INF\persistence.xml
+	|			|
+	your orm code		3. your orm code
+	to perform 		   to perfrom
+	persistence 		  persistence
+
+				
+				Persistence
+				EntityManagerFactory
+				EntityManager - CRUD operation
+				EntityTransaction - commit rollback
+
+
+
+	1. Pojo 	- SavingsAccount
+	2. PojoDAO 	- SavingsAccountDAO
+	3. PojoDAOImpl 	- SavingsAccountDAOImpl - ctor -> EMF, EM 
+				create  - persist
+				read	- find
+				readAll - createQuery
+				update  - merge
+				delete  - remove
+				
+
+
+	
+
+
+7839 KING       PRESIDENT            17-NOV-81       5000                    10
+7782 CLARK      MANAGER         7839 09-JUN-81       2450                    10
+7934 MILLER     CLERK           7782 23-JAN-82       1300                    10
+
+
+			KING - factory - sports products
+			|
+---------------------------------------------------
+|		|			|
+ACCOUNTING	RESEARCH		SALES
+|		|			|	
+CLARK		JONES			BLAKE
+|MANAGER	|MANAGER		|MANAGER
+|		|			--------------------------------------
+MILLER	-------------------		|	|	|	|	|
+clerk	|		|		MARTIN	ALLEN	TURNER	WARD	JAMES
+	FORD		SCOTT		<-------salesman------------>	clerk
+	|ana		|ana
+	SMITH		ADAMS	
+	clerk		clerk
+
+
+
+
+
+
+
+100870,100860,100861,100860,100870,100871,100860,100861,100870
+
+100860,100861,100870,100871
+
+ show the CUSTNAME name of MARTIN, and that customers ORDERS,
+ and ITEMS from these ORDERS, plus PRODUCT description of these ITEMS
+ REM - PRICE of THESE ITEMS
+
+	Customer
+	Order
+	Item
+	Price
 
 
