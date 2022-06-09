@@ -1823,3 +1823,106 @@ clerk	|		|		MARTIN	ALLEN	TURNER	WARD	JAMES
 	Price
 
 
+
+
+
+	@OneToOne	- One Employee <--> One Passport
+			- One Employee <--> One AdhaarCard
+			- One Employee <--> One PanCard
+			- One Employee <--> One VoterCard
+
+
+	emp
+	---
+	PK				 fk
+	empno	ename	job	salary   passno
+	121	Jack	Clerk	5000	 56786768
+
+			passport
+			-----------
+			PK								FK (unique)			
+			passportnumber  passIssuedDate passExpiryDate issuedBy		eno
+			56786768	2020-12-12	2030-12-12	Govt. India	121
+	
+	@OneToMany
+	@ManyToOne
+
+	@ManyToMany
+
+
+
+Hibernate: 
+	create table employee1 
+	(empno number(10,0) not null, 
+	emp_basic_sal double precision, 
+	emp_name varchar2(20 char), 
+	passport_passport_number number(10,0), 
+	primary key (empno))
+
+Hibernate: 
+	create table passport1 
+	(passport_number number(10,0) not null, 
+	issued_by varchar2(20 char), 
+	passport_expiry date, 
+	passport_issued date, 
+	employee_empno number(10,0), 
+	primary key (passport_number))
+
+Hibernate: 
+	alter table employee1 
+	add constraint FK8fjn9x0rb7sekk7tgxvsq6fgr 
+	foreign key (passport_passport_number) references passport1
+
+Hibernate: 
+	alter table passport1 
+	add constraint FK773et7mn94fqaao9dy2lef8h4 
+	foreign key (employee_empno) references employee1
+
+
+
+select 
+	department0_.dept_no as dept_no1_0_2_, 
+	department0_.dept_name as dept_name2_0_2_, 
+	department0_.dept_loc as dept_loc3_0_2_, 
+	
+	employees1_.deptno as deptno4_1_4_, 
+	employees1_.empno as empno1_1_4_, 
+	employees1_.empno as empno1_1_0_, 
+	employees1_.emp_basic_sal as emp_basic_sal2_1_0_, 
+	employees1_.deptno as deptno4_1_0_, 
+	employees1_.emp_name as emp_name3_1_0_, 
+
+	employees1_.passport_passport_number as passport_passport_5_1_0_, 
+	passport2_.passport_number as passport_number1_2_1_, 
+	passport2_.employee_empno as employee_empno5_2_1_, 
+	passport2_.issued_by as issued_by2_2_1_, 
+	passport2_.passport_expiry as passport_expiry3_2_1_, 
+	passport2_.passport_issued as passport_issued4_2_1_ 
+	
+	from dept11 department0_ left outer join employee12 employees1_ 
+	on department0_.dept_no=employees1_.deptno 
+
+	left outer join passport12 passport2_ on 
+	employees1_.passport_passport_number=passport2_.passport_number 
+
+	where department0_.dept_no=?
+
+
+
+	Customer			Subscription
+	----------			--------------
+cust_id	custname  custemail		sub_id	sub_type  sub_duration
+1	Suresh    ...			45	Books	  1 month
+2	Naresh	  ...			55	CD	  3 months
+3	Jayesh	  ....
+
+			customer_subscription_link
+			-------------------------
+			cust_id	sub_id
+			1	45
+			1	55
+			2	45
+			2	55
+			3	45	
+			3	55	
+
