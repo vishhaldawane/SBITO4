@@ -1,4 +1,4 @@
-package strategy2;
+package strategy4;
 
 import org.junit.jupiter.api.Test;
 
@@ -12,8 +12,11 @@ public class BillingDetailsStrategy2Test {
 	@Test
 	public void testCase1() {
 		
-		BankAccount bankAcc= new BankAccount();
+		BillingDetails billDet = new BillingDetails();
+		billDet.setNum("100");
+		billDet.setOwner("King");
 		
+		BankAccount bankAcc= new BankAccount();
 		bankAcc.setOwner("Jack");
 		bankAcc.setNum("123");
 		bankAcc.setBankName("SBI");
@@ -25,6 +28,7 @@ public class BillingDetailsStrategy2Test {
 		creditCard.setExpiryMonth("Jan");
 		creditCard.setExpiryYear("2025");
 		
+		baseDao.persist(billDet);
 		baseDao.persist(bankAcc);
 		baseDao.persist(creditCard);
 	}
