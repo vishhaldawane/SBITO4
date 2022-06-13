@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="style.css"/>
+
+<script src="bank.js"
+ type="text/javascript" >
+
+</script>
+
+
+</head>
+<body>
+	
+	
+	<h1>SBI</h1>
+	
+	<h2>Register With Us</h2>
+	<hr>
+	<a href="index.html">Home</a><br>
+	
+	<form action="login.html">
+		<table border=1 cellpadding=10 cellspacing=10>
+			<tr> <td>Enter your first name </td> <td> <input type=text id="my_fname" onkeyup="clearErrMsg1()"> <span id="fname_err">A</span></td></tr>
+			<tr> <td>Enter your last name </td> <td> <input type=text id="my_lname"  onkeyup="clearErrMsg2()"> <span id="lname_err">B</span></td></tr>
+			<tr> <td>Enter your birth date </td> <td> <input type=date id="my_dob"   onkeyup="clearErrMsg3()">  <span id="dob_err">C</span></td></tr>
+			<tr> <td>Enter your email address </td> <td> <input type=email id="my_email" onkeyup="clearErrMsg4()"> <span id="email_err">D</span></td></tr>
+			<tr> <td><input type=submit name=submit value="Register" onclick="return getData()"></td>
+		</table>
+	</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
