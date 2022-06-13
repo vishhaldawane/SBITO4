@@ -1,15 +1,16 @@
 package com.sbi;
 
-@DevelopedBy(name="vijay",version=1.3)
+@DevelopedBy(name="vijay",version=1.3 )
+
 public  class Flight { 
 
-	
+	@CreatedBy	
 	public  int flightNumber;
 	public String flightName;
 	public  String source;
 	public  String destination;
 	
-
+	
 	public Flight(int flightNumber, String flightName) {
 		super();
 		this.flightNumber = flightNumber;
@@ -46,9 +47,9 @@ public  class Flight {
 	}
 
 
-	
-	public void fly() { 
-		System.out.println("Flight is flying....");
+	@DefinedBy(validation="something")
+	public void fly(Scope s) { 
+		System.out.println("Flight is flying...."+s);
 	}
 	public void landing() {
 		System.out.println("Flight is landing....");
