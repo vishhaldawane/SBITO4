@@ -1,0 +1,36 @@
+<h2>I</h2>
+Principal {{ principal}} <br>
+Number Of Years {{ numberOfYears }} <br>
+Rate Of Interest {{  rateOfInterest }} <br>
+Simple Interest {{ simpleInterest }} <br>
+<hr>
+<h2>II</h2>
+Enter Principal Amount <input type="number" value="{{principal}}"> <br>
+Enter Number Of Years <input type="number" value="{{numberOfYears }}"> <br>
+Enter Rate Of Interest <input type="number" value="{{rateOfInterest }}"> <br>
+<button (click)="calculateSI()">Calculate Simple Interest</button>
+Calculated Simple Interest {{ simpleInterest }} <br>
+<hr>
+<h2>III</h2>
+Enter Principal Amount <input type="number" [value]="principal"> <br>
+Enter Number Of Years <input type="number" [value]="numberOfYears"> <br>
+Enter Rate Of Interest <input type="number" [value]="rateOfInterest"> <br>
+<button (click)="calculateSI()">Calculate Simple Interest</button>
+Calculated Simple Interest {{ simpleInterest }} <br>
+<hr>
+
+
+<h2>IV</h2>
+Enter Principal Amount <input type="number" [(ngModel)]="principal"> <br>
+Enter Number Of Years <input type="number" [(ngModel)]="numberOfYears"> <br>
+Enter Rate Of Interest <input type="number" [(ngModel)]="rateOfInterest"> <br>
+<button (click)="calculateSI()">Calculate Simple Interest</button>
+Calculated Simple Interest {{ simpleInterest }} <br>
+<hr>
+
+<h2>V</h2>
+Enter Principal Amount <input type="number" [(ngModel)]="principal" (input)="calculateSI()"> <br>
+Enter Number Of Years <input type="number" [(ngModel)]="numberOfYears" (input)="calculateSI()"> <br>
+Enter Rate Of Interest <input type="number" [(ngModel)]="rateOfInterest" (input)="calculateSI()"> <br>
+Calculated Simple Interest {{ simpleInterest }} <br>
+<hr>
