@@ -1,0 +1,20 @@
+<p>currency-converter works!</p>
+
+Source Country : <select [(ngModel)]="sourceCountrySelected" >
+                    <option *ngFor="let country of countries" >{{country}}</option>
+                </select> <br>
+
+Target Country : <select [(ngModel)]="targetCountrySelected" >
+                    <option *ngFor="let country of countries" >{{country}}</option>
+                </select>
+
+<br>
+
+Enter amount to convert <input type="number" [(ngModel)]="amountToConvert"> <br>
+
+<button (click)="convertIt()">Convert</button>
+
+Converted Amount {{convertedAmount}}
+
+source {{sourceCountrySelected}} <br>
+target {{targetCountrySelected}} <br>
