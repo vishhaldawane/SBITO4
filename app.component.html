@@ -1,5 +1,76 @@
-{{ title }} app is running!
-<!-- <table border=1 cellspacing="10" cellpadding="10">
+
+
+Converted amount {{ 5000 | currency }} <br>
+Converted amount {{ 5000 | currency : 'USD'}} <br>
+Converted amount {{ 5000 | currency : 'EUR'}} <br>
+Converted amount {{ 5000 | currency : 'INR'}} <br>
+Converted amount {{ 5000 | currency : 'GBP'}} <br>
+
+<input type=date [(ngModel)]="hireDate">
+hire date is {{ hireDate }}
+
+<hr>
+short Date of joining {{ hireDate | date : 'short'}} <br>
+medium Date of joining {{ hireDate | date : 'medium'}} <br>
+long Date of joining {{ hireDate | date : 'long'}} <br>
+full Date of joining {{ hireDate | date : 'full'}} <br>
+<hr>
+shortDate :Date of joining {{ hireDate | date : 'shortDate'}} <br>
+mediumDate: Date of joining {{ hireDate | date : 'mediumDate'}} <br>
+longDate  :Date of joining {{ hireDate | date : 'longDate'}} <br>
+fullDate  : of joining {{ hireDate | date : 'fullDate'}} <br>
+<hr>
+Date of joining {{ hireDate | date : 'shortTime'}} <br>
+Date of joining {{ hireDate | date : 'mediumTime'}} <br>
+Date of joining {{ hireDate | date : 'longTime'}} <br>
+Date of joining {{ hireDate | date : 'fullTime'}} <br>
+<hr>
+Date of joining {{ hireDate | date : 'dd-MM-YYYY'}} <br>
+
+{{ 'this line is converted into capital' | uppercase }}
+{{ 'THIS LINE IS CONVERTED INTO LOWERCSAE' | lowercase }}
+<br>
+cube of 3 is {{ 3 | cube }}
+
+<!-- 
+<mat-slider
+  thumbLabel 
+  tickInterval="1000"
+  min="1"
+  max="100000"></mat-slider>
+
+<h2> hi </h2>
+<mat-slider class="mat-app-background" thumbLabel tickInterval="4"></mat-slider>
+
+<h2> hello </h2>
+<p>Default Accent Theme Slider</p>
+<mat-slider></mat-slider>
+<hr>
+  
+<p>Primary Theme Slider</p>
+<mat-slider color="primary"></mat-slider>
+<hr>
+  
+<p>Warn Theme Slider</p>
+<mat-slider color="warn"></mat-slider>
+<hr>
+  
+<p>Inverted Slider</p>
+<mat-slider invert="true"></mat-slider>
+<hr>
+  
+<p>Vertical Slider</p>
+<mat-slider vertical="true"></mat-slider>
+<hr>
+  
+<p>Disabled Slider</p>
+<mat-slider disabled="true"></mat-slider>
+<hr>
+
+
+
+  <app-simple-interest-calculator></app-simple-interest-calculator>
+  <table border=1 cellspacing="10" cellpadding="10">
   <tr><td>Employee Number </td> <td>{{employeeNumber}} </td> </tr>
   <tr><td>Employee Name </td> <td>{{empName}} </td> </tr>
   <tr><td>Employee Job  </td> <td>{{job}} </td> </tr>
@@ -20,7 +91,7 @@
   <tr><td>Commission </td> <td>{{empObj.commission}} </td> </tr>
   <tr><td>Dept Number </td> <td>{{empObj.deptNumber}} </td> </tr>
 </table>
- -->
+
 
  <table border=1 cellspacing="10" cellpadding="10">
   <tr>
@@ -74,24 +145,27 @@
 </tr>
 </table>
 
-<hr>
-<h3> Printing the Employee Array </h3>
-
+<hr><h3> Printing the Employee Array </h3>
 <table border=1 cellspacing="10" cellpadding="10">
   <tr>
-      <th>Employee Number </th> 
-      <th>Employee Name </th> 
-      <th>Employee Job  </th> 
-      <th>Manager Code </th> 
-      <th>Date Of Hiring  </th> 
-      <th>Basic Salary </th> 
-      <th>Commission </th> 
-      <th>Dept Number </th> 
+      <th>Employee Number </th>       
+      <th>Employee Name </th>      <th>Marital Status </th> 
+      <th>Employee Job  </th>       <th>Manager Code </th> 
+      <th>Date Of Hiring  </th>       <th>Basic Salary </th> 
+      <th>Commission </th>       <th>Dept Number </th> 
   </tr>
 
   <tr *ngFor="let empObj of empStaff">
       <td>{{empObj.employeeNumber}} </td> 
       <td>{{empObj.empName}} </td> 
+       
+      
+      <td *ngIf="empObj.maritalStatus==true; else myElseBlock">Married</td> 
+      
+      <ng-template #myElseBlock>
+            <td>Unmarried</td>
+      </ng-template>
+
       <td>{{empObj.job}} </td> 
       <td>{{empObj.managerCode}} </td> 
       <td>{{empObj.hireDate}} </td> 
@@ -102,6 +176,7 @@
       <td> <button> Delete  </button></td>
   </tr>
 </table>
+ -->
 
 <!-- 
   <app-register></app-register>

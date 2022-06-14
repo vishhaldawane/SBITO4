@@ -30,6 +30,7 @@ export class AppComponent { //model + Logic
     { 
       "employeeNumber" : 1234,
       "empName" : "Smith",
+      "maritalStatus" : true,
       "job" : "Manager",
       "managerCode":7839,
       "hireDate": new Date("Sun Feb 23 2025 11:30:00"),
@@ -40,6 +41,7 @@ export class AppComponent { //model + Logic
     { 
       "employeeNumber" : 3234,
       "empName" : "Peter",
+      "maritalStatus" : false,
       "job" : "Clerk",
       "managerCode":7839,
       "hireDate": new Date("Sun Feb 20 2026 11:30:00"),
@@ -50,6 +52,7 @@ export class AppComponent { //model + Logic
     { 
       "employeeNumber" : 7655,
       "empName" : "Adam",
+      "maritalStatus" : true,
       "job" : "Salesman",
       "managerCode":7654,
       "hireDate": new Date("Sun Feb 20 2027 11:30:00"),
@@ -60,6 +63,7 @@ export class AppComponent { //model + Logic
     { 
       "employeeNumber" : 5634,
       "empName" : "Peter",
+      "maritalStatus" : false,
       "job" : "Analyst",
       "managerCode":7539,
       "hireDate": new Date("Sun Mar 23 2024 11:30:00"),
@@ -70,6 +74,7 @@ export class AppComponent { //model + Logic
     { 
       "employeeNumber" : 6634,
       "empName" : "Allen",
+      "maritalStatus" : true,
       "job" : "Clerk",
       "managerCode":7435,
       "hireDate": new Date("Sun Apr 23 2025 11:30:00"),
