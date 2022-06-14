@@ -35,6 +35,61 @@
       </tr>
 
   <tr>
+      <td>{{empObj1.employeeNumber}} </td> 
+      <td>{{empObj1.empName}} </td> 
+      <td>{{empObj1.job}} </td> 
+      <td>{{empObj1.managerCode}} </td> 
+      <td>{{empObj1.hireDate}} </td> 
+      <td>{{empObj1.basicSalary}} </td> 
+      <td>{{empObj1.commission}} </td> 
+      <td>{{empObj1.deptNumber}} </td> 
+      <td> <button> Edit </button></td>
+      <td> <button> Delete  </button></td>
+  </tr>
+
+  <tr>
+    <td>{{empObj2.employeeNumber}} </td> 
+    <td>{{empObj2.empName}} </td> 
+    <td>{{empObj2.job}} </td> 
+    <td>{{empObj2.managerCode}} </td> 
+    <td>{{empObj2.hireDate}} </td> 
+    <td>{{empObj2.basicSalary}} </td> 
+    <td>{{empObj2.commission}} </td> 
+    <td>{{empObj2.deptNumber}} </td> 
+    <td> <button> Edit </button></td>
+      <td> <button> Delete  </button></td>
+</tr>
+
+<tr>
+  <td>{{empObj3.employeeNumber}} </td> 
+  <td>{{empObj3.empName}} </td> 
+  <td>{{empObj3.job}} </td> 
+  <td>{{empObj3.managerCode}} </td> 
+  <td>{{empObj3.hireDate}} </td> 
+  <td>{{empObj3.basicSalary}} </td> 
+  <td>{{empObj3.commission}} </td> 
+  <td>{{empObj3.deptNumber}} </td> 
+  <td> <button> Edit </button></td>
+      <td> <button> Delete  </button></td>
+</tr>
+</table>
+
+<hr>
+<h3> Printing the Employee Array </h3>
+
+<table border=1 cellspacing="10" cellpadding="10">
+  <tr>
+      <th>Employee Number </th> 
+      <th>Employee Name </th> 
+      <th>Employee Job  </th> 
+      <th>Manager Code </th> 
+      <th>Date Of Hiring  </th> 
+      <th>Basic Salary </th> 
+      <th>Commission </th> 
+      <th>Dept Number </th> 
+  </tr>
+
+  <tr *ngFor="let empObj of empStaff">
       <td>{{empObj.employeeNumber}} </td> 
       <td>{{empObj.empName}} </td> 
       <td>{{empObj.job}} </td> 
@@ -43,6 +98,8 @@
       <td>{{empObj.basicSalary}} </td> 
       <td>{{empObj.commission}} </td> 
       <td>{{empObj.deptNumber}} </td> 
+      <td> <button> Edit </button></td>
+      <td> <button> Delete  </button></td>
   </tr>
 </table>
 
