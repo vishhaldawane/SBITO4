@@ -1,0 +1,56 @@
+<html>
+	<script>
+
+		//alert('hello alert');
+		//prompt('hello prompt');
+
+		function askMe(question, yes, no)
+		{
+			if(confirm(question))
+				yes();
+			else
+				no();
+		}
+
+		askMe(
+			'Are you sure?', 
+
+			function() {
+				alert('Im sure');
+			},
+			function() { 
+				alert('Im NOT sure');
+			} 
+		);
+
+		askMe(
+			'Do you love yourself?', 
+
+			function() {
+				alert('Yes, thats the true love');
+			},
+			function() { 
+				alert('else it is a fake...');
+			} 
+		);
+
+
+		askMe(
+			'Do you hate yourself?', 
+
+			function() {
+				alert('Yes, I dont like myself, hence nobody likes me....');
+			},
+			function() { 
+				alert('No, i dont hate myself, thats a flaw...');
+			} 
+		);
+		
+		
+	</script>
+<body>
+	<h1> hello </h1>
+</body>
+
+</html>
+
