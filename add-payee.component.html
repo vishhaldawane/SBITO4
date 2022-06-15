@@ -1,6 +1,13 @@
 <p>add-payee works!</p>
-Enter number one <input type="number" [(ngModel)]="a" (input)="makeSumOfTwo()">
-Enter number two <input type="number" [(ngModel)]="b" (input)="makeSumOfTwo()">
+Enter number one <input type="number" [(ngModel)]="a" (input)="makeSumOfTwo()"><br>
+Enter number two <input type="number" [(ngModel)]="b" (input)="makeSumOfTwo()"><br>
 
 
-The sum is {{ sum }}
+The sum is {{ sum }} <br>
+
+Enter source country <input type="text" [(ngModel)]="sourceCountry"><br>
+Enter target country <input type="text" [(ngModel)]="targetCountry"><br>
+Enter amount to convert <input type="number" [(ngModel)]="amountToConvert" (input)="convertIt()"> <br>
+<button (click)="convertIt()"> convert </button>
+
+Converted amount {{ convertedAmount }}
