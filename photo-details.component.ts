@@ -10,7 +10,25 @@ export class PhotoDetailsComponent implements OnInit {
 
   constructor(private uds: UserDetailsService) { }
 
+  dummyPhotoId!:number;
+
   myPhotos: any[]=[];
+  myPhoto!: any;
+
+  
+  loadSinglePhoto() {
+    this.uds.findSinglePhoto(this.dummyPhotoId).subscribe
+    (
+      {
+        next: (data: any) =>  {
+          this.myPhoto = data;
+          console.log(data);
+        },
+        complete: () => {},
+        error: () => { console.log(console.error()); }
+      }
+   );
+  }
 
   
   ngOnInit(): void {

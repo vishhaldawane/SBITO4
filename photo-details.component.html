@@ -1,5 +1,25 @@
 <p>photo-details works!</p>
 
+<input type="number" [(ngModel)]="dummyPhotoId" (input)="loadSinglePhoto()">
+
+<table border=1>
+    <tr>
+        <th> albumId </th>
+        <th> Id    </th>
+        <th>  Title </th>
+        <th>  URL </th>
+        <th>   Thumbnail URL  </th>
+    </tr>
+
+    <tr>
+        <td> {{myPhoto.albumId}}</td>
+        <td> {{myPhoto.id}}</td>
+        <td> {{myPhoto.title}}</td>
+        <td> {{myPhoto.url}}</td>
+        <td> {{myPhoto.thumbnailUrl}}</td>
+    </tr>
+</table>
+
 <table border=1>
     <tr>
         <th> albumId </th>

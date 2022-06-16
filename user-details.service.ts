@@ -15,4 +15,7 @@ export class UserDetailsService {
     return this.myHttp.get<any[]>(this.baseURL);
   }
 
+  findSinglePhoto(photoId:number) : Observable<any> {
+    return this.myHttp.get<any>(this.baseURL+photoId);
+  }
 }
