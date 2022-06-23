@@ -27,4 +27,14 @@ export class FlightService {
   {
     return this.myHttp.put<Flight>(this.BASEURL+"updateFlight",flightObj);
   }
+
+  deleteFlightFromSpring(flightNumber:number) : Observable<Flight>
+  {
+    return this.myHttp.delete<Flight>(this.BASEURL+"deleteFlight/"+flightNumber);
+  }
+
+  addFlightObjectToSpring(flightObject: Flight) : Observable<Flight>
+  {
+    return this.myHttp.post<Flight>(this.BASEURL+"addFlight/",flightObject);
+  }
 }
