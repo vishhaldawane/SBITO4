@@ -8,12 +8,23 @@ import { Flight } from './flight/Flight';
 })
 export class FlightService {
 
-  BASEURL="http://localhost:8080/flight/getFlight/";
+  BASEURL="http://localhost:8080/flight/";
 
   constructor(private myHttp: HttpClient) { }
 
   loadFlightObjectFromSpring(flno: number) : Observable<Flight>
   {
-    return this.myHttp.get<Flight>(this.BASEURL+flno);
+    return this.myHttp.get<Flight>(this.BASEURL+"getFlight/"+flno);
+  }
+
+  
+  loadAllFlightsFromSpring() : Observable<Flight[]>
+  {
+    return this.myHttp.get<Flight[]>(this.BASEURL+"getFlights");
+  }
+
+  updateFlightFromSpring(flightObj:Flight) : Observable<Flight>
+  {
+    return this.myHttp.put<Flight>(this.BASEURL+"updateFlight",flightObj);
   }
 }

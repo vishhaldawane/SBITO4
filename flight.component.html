@@ -1,0 +1,28 @@
+<p>flight works!</p>
+
+Enter flight number <input type="number" [(ngModel)]="flightObject.flightNumber" (input)="findFlight()"> <span>{{this.msg}}</span><br>
+ flight Name <input type="text" [(ngModel)]="flightObject.airline"><br>
+ flight source <input type="text" [(ngModel)]="flightObject.sourceCity"><br>
+ flight target <input type="text" [(ngModel)]="flightObject.targetCity"><br>
+ flight departure {{flightObject.flightDepartureTime }}<br>
+ flight arrival  {{flightObject.flightArrivalTime}} <br>
+<hr>
+
+<table border="5" cellspacing=10 cellpadding="10">
+    <tr>
+    <th> Flight Number </th>    <th> Flight Name </th>    <th> Flight Source </th>
+    <th> Flight Destination </th>    <th> Flight Departure </th>    <th> Flight Arrival </th>
+    </tr>
+
+    <tr *ngFor="let flight of flightArray">
+        <td> {{ flight.flightNumber}}</td>
+        <td> <input type="text" [(ngModel)]="flight.airline"> </td>
+        <td> <input type="text" [(ngModel)]="flight.sourceCity"> </td>
+        <td> <input type="text" [(ngModel)]="flight.targetCity"> </td>
+        <td> {{ flight.flightDepartureTime}}</td>
+        <td> {{ flight.flightArrivalTime}}</td>
+        <td> <button (click)="updateFlight(flight)"> Update </button></td>
+        <td> <button> Delete </button></td>
+        
+    </tr>
+</table>
